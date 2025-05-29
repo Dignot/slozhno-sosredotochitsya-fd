@@ -77,11 +77,6 @@ background-position: center;
       color: var(--text-color);
 
   }
-
-  .header__theme-menu-button {
-  color: var(--text-color);
-}
-
 .header__theme-menu-button_active {
   outline: 1px solid var(--border-color)
 }
@@ -124,7 +119,6 @@ background-position: center;
     color: var(--title-color);
  text-shadow: 4px 4px 0px var(--title-color-shadow);
  padding-top: 240px;    
-
   }
 
   .header__card {
@@ -198,8 +192,6 @@ background-position: center;
   
   .concentration__item {
         flex: 0 0 315px;
-        
-
   }
 
   .tip {
@@ -414,10 +406,10 @@ background-position: center;
         margin-top: 55px;
   }
 
-  .header__title  {
+  .header__title {
     line-height: 83%;
     padding-left: 10px;
-    padding-top:68px ;
+    padding-top: 68px;
   }
 
   .main {
