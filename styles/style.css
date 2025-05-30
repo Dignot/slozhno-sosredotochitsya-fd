@@ -1,6 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .link {
-  text-shadow:2px 2px 0px var(--title-color-shadow);
+  text-shadow: 2px 2px 0px var(--title-color-shadow);
   text-decoration: none;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .link:focus-visible {
-  outline:1px solid var(--link-color-text);
+  outline: 1px solid var(--link-color-text);
 }
 
 .page {
@@ -19,7 +19,7 @@
   background-attachment: fixed;
   background-image: var(--background-image-dark);
   background-size: cover;
-  background-position: center;
+  background-position: center center;
 }
 
 .header {
@@ -31,11 +31,11 @@
   padding-bottom: 134px;
   padding-right: 20px;
   position: relative;
-
 }
 
-.decorated-zone::before,::after {
- content: '';
+.decorated-zone::before,
+::after {
+  content: '';
   position: absolute;
   width: 25px;
   height: 25px;
@@ -56,41 +56,39 @@
 }
 
 .header__theme-menu {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
 
-  
 .header__theme-menu-list {
-    display: flex;
-    gap:10px;
-    padding-left: 20px;
-    line-height: 18px;
-  }
+  display: flex;
+  gap: 10px;
+  padding-left: 20px;
+  line-height: 18px;
+}
 
-  
 .header__theme-menu-button {
-    background: none;
-    border: 0;
-    padding: 2.5px 13px;
-    font-family:inherit ;
-    font-size: inherit;
-    font-weight: inherit;
-    color: var(--text-color);
-     cursor: pointer;
-  }
-  
+  background: none;
+  border: 0;
+  padding: 2.5px 13px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
 .header__theme-menu-button_active {
-    outline: 1px solid var(--border-color)
-  }
+  outline: 1px solid var(--border-color);
+}
 
 .header__text {
-    color: var(--text-color);
-    position: absolute;
-    padding-right: 17px;
-    top: 21px;
-    right: 31px;
-  }
+  color: var(--text-color);
+  position: absolute;
+  padding-right: 17px;
+  top: 21px;
+  right: 31px;
+}
 
 .header__text::after {
   content: '';
@@ -102,132 +100,131 @@
   background-color: var(--text-color);
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--text-color);
-  }
+}
 
-  .header__theme-menu-button:hover {
-    outline: 1px solid var(--border-color-hover)
-  }
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--border-color-hover);
+}
 
-  .header__theme-menu-button:focus-visible {
-    outline: 0;
-    border-bottom: 1px solid var(--border-color)
-  }
+.header__theme-menu-button:focus-visible {
+  outline: 0;
+  border-bottom: 1px solid var(--border-color);
+}
 
-  .title {
-    font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-    font-weight: var(--font-weight-bold);
-    color: var(--title-color);
-    text-shadow: 4px 4px 0px var(--title-color-shadow);
-  }
+.title {
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--title-color-shadow);
+}
 
-  .header__title {
-    padding-top: 240px; 
-    line-height: 83%;   
-  }
+.header__title {
+  padding-top: 277px;
+  line-height: 83%;
+}
 
-  .header__card {
-    max-width: 491px;
-    background-color: var(--bacground-color-header);
-    margin-left: auto;
-    color: #000;
-    font-weight: var(--font-weight-bold);
-    margin-top: 76px;
-  }
+.header__card {
+  max-width: 491px;
+  background-color: var(--bacground-color-header);
+  margin-left: auto;
+  color: #000;
+  font-weight: var(--font-weight-bold);
+  margin-top: 113px;
+}
 
-  .main {
-    margin: 0 20px;
-    margin-bottom: 60px
-  }
+.main {
+  margin: 0 20px;
+  margin-bottom: 60px;
+}
 
-  .focus-tip {
-    display: flex;
-    gap: 35px;
-    margin-bottom: 80px;
-  }
+.focus-tip {
+  display: flex;
+  gap: 35px;
+  margin-bottom: 80px;
+}
 
-  .focus-tip__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 23px;
-  }
+.focus-tip__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
 
-  .title-decor {
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-normal);
-    color: var(--text-color);
-    flex: 0 0 300px;
-    line-height: 23.4px;
-  }
+.title-decor {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-normal);
+  color: var(--text-color);
+  flex: 0 0 300px;
+  line-height: 23.4px;
+}
 
-  .cards__item-title {
-    background-color: var(--card-background-color);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-normal);
-    margin-bottom: 9px;
-    color: var( --color-title-card);
-  }
+.cards__item-title {
+  background-color: var(--card-background-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-normal);
+  margin-bottom: 9px;
+  color: var(--color-title-card);
+}
 
-  .cards__item-text {
-      font-weight: var(--font-weight-normal);
-     font-size: var(--font-size-normal);
-     color: var(--color-text-card);
-     line-height: 23.4px;
-  }
+.cards__item-text {
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-normal);
+  color: var(--color-text-card);
+  line-height: 23.4px;
+}
 
-  .concentration {
-     margin-bottom: 80px;
-  }
+.concentration {
+  margin-bottom: 80px;
+}
 
-  .concentration__title {
-    max-width: 300px;
-    margin-bottom: 20px;
-  }
+.concentration__title {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
 
-  .concentration__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 19.5px;
-    justify-content: space-between;
-  }
-  
-  .concentration__item {
-    flex: 0 0 315px;
-  }
+.concentration__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19.5px;
+  justify-content: space-between;
+}
 
-  .tip {
-    display: flex;
-    gap: 33px;  
-    margin-bottom: 80px;
-  } 
+.concentration__item {
+  flex: 0 0 315px;
+}
 
-  .tip__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 21px;
-  }
+.tip {
+  display: flex;
+  gap: 33px;
+  margin-bottom: 80px;
+}
 
-  .tip__title {
-    flex: 0 0 303px;
-  }
+.tip__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
 
-  .cards__item-title--weight {
-    font-weight:var(--font-weight-normal); ;
-  }
+.tip__title {
+  flex: 0 0 303px;
+}
 
-  .cards__title {
-    background-color: var(--card-background-color);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-normal);
-    color: var( --color-title-card);
-  }
+.cards__item-title--weight {
+  font-weight: var(--font-weight-normal);
+}
 
-  .images__title {
-    background-color: var(--card-background-color);
-    color: var(--color-title-card);
-    margin-bottom: 20px;
+.cards__title {
+  background-color: var(--card-background-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-normal);
+  color: var(--color-title-card);
+}
 
-  }
-  
+.images__title {
+  background-color: var(--card-background-color);
+  color: var(--color-title-card);
+  margin-bottom: 20px;
+}
+
 .images__galeray {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -280,9 +277,7 @@
   display: block;
 }
 
-
 @media (768px<=width<1024px) {
-
   .decorated-zone {
     padding-bottom: 183px;
     padding-top: 192px;
@@ -292,7 +287,7 @@
     gap: 149px;
     flex-direction: column-reverse;
   }
-  
+
   .header__theme-menu-list {
     padding-left: 0;
     flex-direction: column;
@@ -302,11 +297,11 @@
 
   .header__title {
     font-size: 120px;
-    padding-top: 149px;
+    padding-top: 178px;
   }
 
   .header__card {
-    margin-top: 132px;
+    margin-top: 159px;
     max-width: 363px;
   }
 
@@ -324,7 +319,7 @@
 
   .concentration__list {
     gap: 21px;
-     flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .concentration__item {
@@ -351,12 +346,10 @@
 }
 
 @media (width<768px) {
-
-    .decorated-zone {
+  .decorated-zone {
     padding-bottom: 66px;
     padding-top: 75px;
     padding-right: 12px;
-
   }
 
   .decorated-zone::after {
@@ -370,30 +363,26 @@
   .header {
     margin-bottom: 40px;
   }
-  
+
   .header__text {
     top: 10px;
     right: 21px;
   }
 
   .header__theme-menu {
-    gap: 13px;
+    gap: 43px;
     flex-direction: column-reverse;
   }
 
-    .header__theme-menu-list {
+  .header__theme-menu-list {
     padding-left: 0;
     flex-direction: column;
     align-items: flex-end;
   }
 
-  .header__theme-menu {
-    gap: 43px;
-  }
-
   .header__card {
-        margin-left: 10px;
-        margin-top: 55px;
+    margin-left: 10px;
+    margin-top: 55px;
   }
 
   .header__title {
@@ -418,8 +407,8 @@
   }
 
   .tip {
-        flex-direction: column;
-        gap: 19px;
+    flex-direction: column;
+    gap: 19px;
     margin-bottom: 51px;
   }
 
@@ -432,12 +421,8 @@
     margin-bottom: 50px;
   }
 
-  .focus-tip__cards {
-    gap: 21px;
-  }
-
   .concentration {
-        margin-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .tip__title {
