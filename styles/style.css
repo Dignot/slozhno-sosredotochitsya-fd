@@ -396,6 +396,8 @@
   }
   .focus-tip {
     flex-direction: column;
+    gap: 21px;
+    margin-bottom: 50px;
   }
 
   .concentration__list {
@@ -414,11 +416,6 @@
 
   .focus-tip__title {
     flex: 0 0 47px;
-  }
-
-  .focus-tip {
-    gap: 21px;
-    margin-bottom: 50px;
   }
 
   .concentration {
