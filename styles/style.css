@@ -1,21 +1,21 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .link {
-  text-shadow:1px 1px 0px var(--title-color-shadow);
+  text-shadow:2px 2px 0px var(--title-color-shadow);
   text-decoration: none;
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--title-color-shadow);
+  border-bottom: 1px solid var(--link-color-text);
 }
-.link:focus {
-  outline:1px solid var(--title-color-shadow);
+
+.link:focus-visible {
+  outline:1px solid var(--link-color-text);
 }
 
 .page {
   font-family: var(--font-family);
   font-size: var(--font-size-normal);
   font-weight: var(--font-weight-normal);
-  background-color: var(--background-page);
   background-attachment: fixed;
   background-image: var(--background-image-dark);
   background-size: cover;
@@ -34,34 +34,34 @@
 
 }
 
-.decorated-zone::before {
-  content: '';
+.decorated-zone::before,::after {
+ content: '';
   position: absolute;
-    right: 21px;
-  top: 20px;
   width: 25px;
   height: 25px;
+}
+
+.decorated-zone::before {
+  right: 21px;
+  top: 20px;
   border-top: 1px solid var(--bacground-color-header);
   border-right: 1px solid var(--bacground-color-header);
 }
+
 .decorated-zone::after {
-  content: '';
-  position: absolute;
-    left: 21px;
+  left: 21px;
   bottom: 20px;
-  width: 25px;
-  height: 25px;
   border-bottom: 1px solid var(--bacground-color-header);
   border-left: 1px solid var(--bacground-color-header);
 }
 
-  .header__theme-menu {
+.header__theme-menu {
     display: flex;
     justify-content: center;
   }
 
   
-  .header__theme-menu-list {
+.header__theme-menu-list {
     display: flex;
     gap:10px;
     padding-left: 20px;
@@ -69,7 +69,7 @@
   }
 
   
-  .header__theme-menu-button {
+.header__theme-menu-button {
     background: none;
     border: 0;
     padding: 2.5px 13px;
@@ -77,13 +77,14 @@
     font-size: inherit;
     font-weight: inherit;
     color: var(--text-color);
+     cursor: pointer;
   }
   
-  .header__theme-menu-button_active {
+.header__theme-menu-button_active {
     outline: 1px solid var(--border-color)
   }
 
-  .header__text {
+.header__text {
     color: var(--text-color);
     position: absolute;
     padding-right: 17px;
@@ -101,13 +102,13 @@
   background-color: var(--text-color);
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--text-color);
-}
-
-  .header__theme-menu-button:hover {
-    outline: 1px solid var(--border-color)
   }
 
-  .header__theme-menu-button:focus {
+  .header__theme-menu-button:hover {
+    outline: 1px solid var(--border-color-hover)
+  }
+
+  .header__theme-menu-button:focus-visible {
     outline: 0;
     border-bottom: 1px solid var(--border-color)
   }
@@ -120,7 +121,8 @@
   }
 
   .header__title {
-    padding-top: 240px;    
+    padding-top: 240px; 
+    line-height: 83%;   
   }
 
   .header__card {
@@ -185,6 +187,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 19.5px;
+    justify-content: space-between;
   }
   
   .concentration__item {
@@ -204,7 +207,7 @@
   }
 
   .tip__title {
-        flex: 0 0 303px;
+    flex: 0 0 303px;
   }
 
   .cards__item-title--weight {
@@ -294,9 +297,6 @@
     padding-left: 0;
     flex-direction: column;
     align-items: flex-end;
-  }
-
-  .header__theme-menu-list {
     gap: 13px;
   }
 
@@ -324,14 +324,11 @@
 
   .concentration__list {
     gap: 21px;
+     flex-wrap: wrap;
   }
 
   .concentration__item {
     flex: 1 1 auto;
-  }
-
-  .concentration__list {
-    flex-wrap: wrap;
   }
 
   .tip__title {
@@ -380,7 +377,7 @@
   }
 
   .header__theme-menu {
-    gap: 149px;
+    gap: 13px;
     flex-direction: column-reverse;
   }
 
@@ -388,10 +385,6 @@
     padding-left: 0;
     flex-direction: column;
     align-items: flex-end;
-  }
-
-  .header__theme-menu-list {
-    gap: 13px;
   }
 
   .header__theme-menu {
@@ -404,9 +397,8 @@
   }
 
   .header__title {
-    line-height: 83%;
     padding-left: 10px;
-    padding-top: 68px;
+    padding-top: 76px;
   }
 
   .main {
@@ -425,18 +417,10 @@
     flex: 1 1 auto;
   }
 
-  .concentration__list {
-    flex-wrap: wrap;
-  }
-
   .tip {
         flex-direction: column;
         gap: 19px;
     margin-bottom: 51px;
-  }
-
-  .wrappen {
-    margin: 0 10px;
   }
 
   .focus-tip__title {
@@ -458,7 +442,7 @@
 
   .tip__title {
     flex: 0 0 70px;
-}
+  }
 
   .images__galeray {
     display: flex;
@@ -476,7 +460,4 @@
     padding-left: 7px;
     font-size: 116px;
   }
-
-
-
 }

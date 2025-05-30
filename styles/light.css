@@ -4,6 +4,8 @@
   переключая тему
 */
 
+
+
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -13,20 +15,33 @@
   --text-color:rgba(53, 52, 48, 1);
   --title-color:rgba(255, 194, 230, 1);
   --title-color-shadow:rgba(255, 141, 203, 1);
-    --bacground-color-header:rgba(255, 141, 203, 1);
-    --background-page:rgba(255, 241, 247, 1);
-    --card-background-color:rgba(255, 141, 203, 1);
-     --color-text-card:rgba(53, 52, 48, 1);
-      --color-title-card:rgba(53, 52, 48, 1);
-}
+  --bacground-color-header:rgba(255, 141, 203, 1);
+  --background-page:rgba(255, 241, 247, 1);
+  --card-background-color:rgba(255, 141, 203, 1);
+  --color-text-card:rgba(53, 52, 48, 1);
+  --color-title-card:rgba(53, 52, 48, 1);
+    --background-image-light:url(./../images/cover-image-light.png);
+    --border-color-hover:rgba(50, 49, 45, 0.4);
+    --border-color-link:rgba(50, 49, 45, 0.4);
 
+}
+@media (prefers-color-scheme: light) {
+:root {
+  --border-color:rgba(53, 52, 48, 1);
+  --text-color:rgba(53, 52, 48, 1);
+  --title-color:rgba(255, 194, 230, 1);
+  --title-color-shadow:rgba(255, 141, 203, 1);
+  --bacground-color-header:rgba(255, 141, 203, 1);
+  --background-page:rgba(255, 241, 247, 1);
+  --card-background-color:rgba(255, 141, 203, 1);
+  --color-text-card:rgba(53, 52, 48, 1);
+  --color-title-card:rgba(53, 52, 48, 1);
+    --background-image-light:url(./../images/cover-image-light.png);
+
+}
+}
 .theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
-.theme-light .decorated-zone {
-  background-image: var( --background-image-light);
-   background-size: cover;
+  background-image: var(--background-image-light);
 }
 
 .theme-light .header__text {
@@ -55,15 +70,21 @@
     color: rgba(53, 52, 48, 1);
 }
 
-.header__theme-menu-button:hover {
-    outline: 1px solid var(--border-color)
+.theme-light .header__theme-menu-button:hover {
+    outline: 1px solid var( --border-color-hover)
   }
 
-  .header__theme-menu-button:focus {
+  .theme-light .header__theme-menu-button:focus-visible {
     outline: 0;
-    border-bottom: 1px solid var(--border-color)
+    border-bottom: 1px solid var( --border-color-hover)
   }
-  
+ .theme-light .link:hover {
+  border-bottom: 1px solid var(--border-color-link);
+}
+
+.theme-light .link:focus-visible {
+  outline:1px solid var(--border-color-link);
+}
 @media (768px<=width<1024px) { 
 
   .theme-light .decorated-zone {
@@ -77,7 +98,6 @@
 
 @media (width < 768px) {
     .theme-light .decorated-zone {
-        padding-right: 1px;
         padding-top: 75px;
      }
 
@@ -85,7 +105,7 @@
       padding-left: 20px
     }
 
-    .theme-light    .header__card {
+    .theme-light .header__card {
         margin-left: 18px;
       }
 
