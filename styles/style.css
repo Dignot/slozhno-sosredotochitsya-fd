@@ -102,7 +102,7 @@
 .header__text::after {
   content: '';
   position: absolute;
-  right: -1px;
+  right: -2px;
   top: 7px;
   width: 9px;
   height: 9px;
@@ -137,16 +137,13 @@
   margin-bottom: 60px;
 }
 
-.title-decor {
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-normal);
-  color: var(--text-color);
+.section-wrapper {
+  display: flex;
+  margin-bottom: 80px;
 }
 
 .focus {
-  display: flex;
-  gap: 36px;
-  margin-bottom: 80px;
+  gap: 34px;
 }
 
 .focus__title {
@@ -160,8 +157,7 @@
   justify-content: space-around;
 }
 
-.cards__item-title {
-  margin-bottom: 9px;
+.title-decor {
   font-weight: var(--font-weight-bold);
   color: var(--color-title-card);
   background-color: var(--card-background-color);
@@ -169,15 +165,22 @@
   width: 100%;
 }
 
+.section-title {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-normal);
+  color: var(--text-color);
+}
+
 .cards__item-text {
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-normal);
   color: var(--color-text-card);
   line-height: 23.4px;
+  margin-top: 9px;
 }
 
 .concentration {
-  margin-bottom: 81px;
+  flex-direction: column;
 }
 
 .concentration__title {
@@ -190,9 +193,7 @@
 }
 
 .tip {
-  display: flex;
-  gap: 33px;
-  margin-bottom: 80px;
+  gap: 32px;
 }
 
 .tip__list {
@@ -210,7 +211,7 @@
   flex: 0 0 303px;
 }
 
-.cards__item-title_sub {
+.cards__item-subtitle {
   font-weight: var(--font-weight-normal);
 }
 
@@ -222,12 +223,10 @@
 }
 
 .images__title {
-  background-color: var(--card-background-color);
-  color: var(--color-title-card);
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
-.images__galeray {
+.images__gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 260px 315px 433px;
@@ -236,7 +235,7 @@
   margin: auto;
 }
 
-.images__galeray img {
+.images__gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -279,13 +278,8 @@
   display: block;
 }
 
-@media (768px<=width<1024px) {
-  .decorated-zone {
-    padding-bottom: 183px;
-    padding-top: 192px;
-  }
-
-  .header__theme-menu {
+@media (width<1024px) {
+ .header__theme-menu {
     gap: 149px;
     flex-direction: column-reverse;
   }
@@ -294,7 +288,14 @@
     padding-left: 0;
     flex-direction: column;
     align-items: flex-end;
-    gap: 13px;
+    gap: 13.5px;
+  }
+}
+
+@media (768px<=width<1024px) {
+  .decorated-zone {
+    padding-bottom: 183px;
+    padding-top: 192px;
   }
 
   .header__title {
@@ -310,7 +311,7 @@
   .main {
     margin-bottom: 62px;
   }
-
+  
   .focus-tip {
     margin-bottom: 80px;
   }
@@ -320,7 +321,7 @@
   }
 
   .concentration__title {
-    max-width: 237px;
+   max-width: 228px;
   }
 
   .concentration__list {
@@ -329,23 +330,27 @@
   }
 
   .concentration .cards__item {
-  flex: none;
-  width: 100%;
-}
+    flex: none;
+    width: 100%;
+  }
 
   .concentration__item {
     flex: 1 1 auto;
-  }
-
-  .tip__title {
-    flex: 0 0 230px;
   }
 
   .tip {
     gap: 25px;
   }
 
-  .images__galeray {
+  .tip__list {
+    margin-top: 22px;
+  }
+
+  .tip__title {
+    flex: 0 0 230px;
+  }
+
+  .images__gallery {
     grid-template-rows: 193px 230px 316px;
   }
 
@@ -372,7 +377,7 @@
     top: 10px;
   }
   .header {
-    margin-bottom: 40px;
+    margin-bottom: 41px;
   }
 
   .header__text {
@@ -382,14 +387,6 @@
 
   .header__theme-menu {
     gap: 43px;
-    flex-direction: column-reverse;
-  }
-
-  .header__theme-menu-list {
-    padding-left: 0;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 14px;
   }
 
   .header__card {
@@ -404,45 +401,35 @@
 
   .main {
     margin: 0 10px;
-    margin-bottom: 39px;
+    margin-bottom: 41px;
   }
-  .focus {
+
+  .section-wrapper {
     flex-direction: column;
-    gap: 21px;
     margin-bottom: 50px;
+  }
+
+  .section-title {
+    flex: 0 0 100%;
+  }
+
+  .focus {
+    gap: 21px;
   }
 
   .concentration__list {
     gap: 22px;
-    
-  }
-  .concentration__item {
-    flex: 1 1 auto;
   }
 
   .tip {
-    flex-direction: column;
     gap: 19px;
-    margin-bottom: 51px;
-  }
-
-  .focus__title {
-    flex: 0 0 47px;
-  }
-
-  .concentration {
-    margin-bottom: 50px;
   }
 
   .concentration .cards__item {
     flex: 0 0 100%;
-}
-
-  .tip__title {
-    flex: 0 0 70px;
   }
 
-  .images__galeray {
+  .images__gallery {
     display: flex;
     gap: 10px;
     flex-direction: column;
